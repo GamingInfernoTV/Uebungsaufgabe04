@@ -11,8 +11,8 @@ public class Beobachtbarer extends Observable {
 
     public void setTemp(int Temp) {
         this.Temp = Temp;
-        super.setChanged(); // Markierung, dass sich der Text geändert hat
-        super.notifyObservers(Temp); // ruft für alle Beobachter die update-Methode auf
+        super.setChanged();
+        super.notifyObservers(Temp);
     }
 
     public int getTemp() {
