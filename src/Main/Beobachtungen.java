@@ -1,15 +1,18 @@
 package Main;
 
-import Beobachter.Beobachter;
+import Beobachter.TemperaturSensor;
 import Heizung.Beobachtbarer;
+import Heizung.Cooling;
+import Heizung.Heater;
 
 import java.util.Arrays;
 
 public class Beobachtungen {
     public static void main(String[] args) {
-        Beobachter beobachter = new Beobachter();
         Beobachtbarer bb = new Beobachtbarer();
-        bb.addObserver(beobachter);
+        bb.addObserver(new TemperaturSensor());
+        bb.addObserver(new Cooling());
+        bb.addObserver(new Heater());
 
         bb.setTemp(20);
         bb.setTemp(50);
