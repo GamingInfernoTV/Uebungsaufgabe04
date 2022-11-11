@@ -5,8 +5,6 @@ import Heizung.Beobachtbarer;
 import Heizung.Cooling;
 import Heizung.Heater;
 
-import java.util.Arrays;
-
 public class Beobachtungen {
     public static void main(String[] args) {
         Beobachtbarer bb = new Beobachtbarer();

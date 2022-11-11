@@ -1,8 +1,5 @@
 package Beobachter;
 
-import Heizung.Cooling;
-import Heizung.Heater;
-
 import java.util.Observable;
 import java.util.Observer;
 
