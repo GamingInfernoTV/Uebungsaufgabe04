@@ -1,13 +1,15 @@
 package Heizung;
 
+import Beobachter.TempObserver;
+
 import java.util.Observable;
 import java.util.Observer;
 
-public class Heater implements Observer {
+public class Heater implements TempObserver {
     private final int MIN_TEMP = -10;
     private boolean isHeaterOn;
 
-    public void update(Observable beobachtbarer, Object Temp) {
+    public void update(Object Temp) {
         changeTemp((int) Temp);
     }
 

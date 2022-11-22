@@ -1,13 +1,15 @@
 package Heizung;
 
+import Beobachter.TempObserver;
+
 import java.util.Observable;
 import java.util.Observer;
 
-public class Cooling implements Observer{
+public class Cooling implements TempObserver{
     private final int MAX_TEMP = 40;
     private boolean isCoolerOn;
 
-    public void update(Observable beobachtbarer, Object Temp) {
+    public void update(Object Temp) {
         changeTemp((int)Temp);
     }
 
